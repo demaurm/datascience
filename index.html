@@ -45,7 +45,7 @@
 <script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
 <div id="container" style="height: 300px"></div>
 <script>
-$.get('https://github.com/demaurm/datascience/blob/master/whatis/keywordCounts.csv', function(csv) {
+$.get('keywordCounts.csv', function(csv) {
     $('#container').highcharts({
         chart: { type: 'column' },
         data: { csv: csv },
