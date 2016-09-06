@@ -48,12 +48,17 @@
 $.get('keywordCounts.csv', function(csv) {
     $('#container').highcharts({
         chart: { type: 'column' },
+        plotOptions: { column: { dataLabels: { enabled: true } } },
         data: { csv: csv },
-        title: { text: 'Keyword Frequencies' },
-        yAxis: { title: { text: 'Frequency' } }
+        title: { text: 'Keyword frequencies for Data Scientist' },
+        subtitle: { text: 'job post snippets from Indeed.com' },
+        yAxis: { title: { text: 'Frequency' } },
+        legend: { enabled: false }
     });
 });
 </script>
+
+<p>The chart above was created from the results of several queries to the Indeed search API, each filtering by a job title of 'Data Scientist'. There are roughly 1000 unique postings. The job postings themselves are actually hosted on individual websites which elect to advertise through Indeed. Thus only "snippets" of each job post is available through the service. The average length of a snippet in the dataset is 151.86 characters and a maximum of 169. This is clearly a small fraction of a typical job post and may not be a truthful representation of the keywords.</p>
 
 <h3>
 <a id="next-topic-tbd" class="anchor" href="#next-topic-tbd" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>(Next topic TBD)</h3>
