@@ -1,0 +1,1 @@
+sqlite3 indeed_datascientist.db < create_indeed_datascientist.sql
